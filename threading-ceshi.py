@@ -53,8 +53,9 @@ class postRequest():
 
 def start():  # 定义接口函数
     # 实例化接口对象
-    login = postRequest('https://www.baidu.com', {"MSG": '1', "name": u"张三", "password": "123456"},
-                        "1.login")
+    login = postRequest(url='192.168.2.37:7022',
+                        values={"MSG": '1', "name": u"张三", "password": "123456"},
+                        interface_name="1.login")
     return login.post()
 
 
